@@ -11,6 +11,8 @@
 		50CC49A42910418D00B9919A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CC49A32910418D00B9919A /* Assets.xcassets */; };
 		50CC49A72910418D00B9919A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CC49A52910418D00B9919A /* LaunchScreen.storyboard */; };
 		50CC49B52910432F00B9919A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49B42910432F00B9919A /* MainViewController.swift */; };
+		50CC49B729116D1400B9919A /* ActionButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49B629116D1400B9919A /* ActionButtonClass.swift */; };
+		50CC49B929116DC800B9919A /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49B829116DC800B9919A /* CustomColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		50CC49A62910418D00B9919A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50CC49A82910418D00B9919A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50CC49B42910432F00B9919A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		50CC49B629116D1400B9919A /* ActionButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonClass.swift; sourceTree = "<group>"; };
+		50CC49B829116DC800B9919A /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				50CC49B42910432F00B9919A /* MainViewController.swift */,
+				50CC49B829116DC800B9919A /* CustomColors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 		50CC49B0291042C000B9919A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50CC49B629116D1400B9919A /* ActionButtonClass.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				50CC499B2910418B00B9919A /* AppDelegate.swift in Sources */,
+				50CC49B729116D1400B9919A /* ActionButtonClass.swift in Sources */,
+				50CC49B929116DC800B9919A /* CustomColors.swift in Sources */,
 				50CC49B52910432F00B9919A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
