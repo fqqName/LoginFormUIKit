@@ -21,9 +21,8 @@ class ActionButtonClass: UIButton{
     
     func setup(){
         backgroundColor = .white
-        layer.borderWidth = 5.0
+        layer.borderWidth = 2.0
         layer.borderColor = CustomColors.littleBoyBlueColor.cgColor
-        layer.cornerRadius = 20
     }
     
     override var isHighlighted: Bool{
