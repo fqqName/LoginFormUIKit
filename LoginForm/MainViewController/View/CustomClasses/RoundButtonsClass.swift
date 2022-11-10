@@ -7,19 +7,19 @@
 
 import UIKit
 
-final class RoundButtons: ActionButtonClass{
+final class RoundedButton: ActionButton {
     
     override func setup() {
         super.setup()
-       setTitleColor(CustomColors.littleBoyBlueColor, for: .normal)
-       titleLabel?.font = UIFont.systemFont(ofSize: 24)
-       titleLabel?.textColor = CustomColors.littleBoyBlueColor
-       layer.masksToBounds = true
-       layer.borderColor = CustomColors.littleBoyBlueColor.cgColor
-       layer.borderWidth = 1.5
-       clipsToBounds = true
-       isHidden = true
-       translatesAutoresizingMaskIntoConstraints = false
+        setTitleColor(CustomColors.littleBoyBlueColor, for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: 24)
+        titleLabel?.textColor = CustomColors.littleBoyBlueColor
+        layer.masksToBounds = true
+        layer.borderColor = CustomColors.littleBoyBlueColor.cgColor
+        layer.borderWidth = 1.5
+        clipsToBounds = true
+        isHidden = true
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     override func layoutSubviews() {

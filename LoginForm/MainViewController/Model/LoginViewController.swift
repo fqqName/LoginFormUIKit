@@ -7,17 +7,18 @@
 
 import UIKit
 
-final class MainViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
-    
-    //MARK: -variables
+final class LoginViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+
+    let presenter = LoginPresenter()
+
+    //MARK: - State
     private var loginInputText:String = ""
     private var passInputText: String = ""
     private var secureUITextFieldTitle: String = ""
     private var secureUITextFieldNumbers: [Int] = []
-//    private var countLoginInputText: Int = 0
-//    private var countPassInputText: Int = 0
+
     
-    //MARK: -Views
+    //MARK: - Views
     
     private let labelView: UILabel = {
         let label = UILabel()
@@ -59,8 +60,8 @@ final class MainViewController: UIViewController, UITextViewDelegate, UITextFiel
         return field
     }()
     
-    private let authorizeButton: AuthorizeUIButton = {
-        let button = AuthorizeUIButton()
+    private let authorizeButton: AuthorizationButton = {
+        let button = AuthorizationButton()
         button.backgroundColor = UIColor.white
         button.configuration = .borderless()
         button.configuration?.title = "authorize"
@@ -92,16 +93,16 @@ final class MainViewController: UIViewController, UITextViewDelegate, UITextFiel
         return label
     }()
     
-    private func createRoundButton(title: String) -> RoundButtons{
-        let button = RoundButtons()
+    private func createRoundButton(title: String) -> RoundedButton{
+        let button = RoundedButton()
         button.setTitle(title, for: .normal)
         button.tag = Int(title) ?? 0
         return button
     }
     
-    private lazy var firstSecureNum: RoundButtons = createRoundButton(title: "1")
-    private lazy var secondSecureNum: RoundButtons = createRoundButton(title: "2")
-    private lazy var thirdSecureNum: RoundButtons = createRoundButton(title: "3")
+    private lazy var firstSecureNum: RoundedButton = createRoundButton(title: "1")
+    private lazy var secondSecureNum: RoundedButton = createRoundButton(title: "2")
+    private lazy var thirdSecureNum: RoundedButton = createRoundButton(title: "3")
     
     //MARK: - viewDidload
     override func viewDidLoad() {
@@ -190,8 +191,10 @@ final class MainViewController: UIViewController, UITextViewDelegate, UITextFiel
     
         ])
     }
+
     //MARK: objC methods
-    @objc func authorizeButtonPress(){
+    @objc func authorizeButtonPress() {
+        presenter.authorizationAction()
         print("authorize button pressed")
         if loginTextField.text == "login" && passTextField.text == "pass"{
             showSecureNumbers()
@@ -200,7 +203,7 @@ final class MainViewController: UIViewController, UITextViewDelegate, UITextFiel
         }
     }
     
-    @objc func addButtonTagToSecureUILabel(sender: RoundButtons){
+    @objc func addButtonTagToSecureUILabel(sender: RoundedButton){
         secureUITextFieldNumbers.append(sender.tag)
         let intToString = secureUITextFieldNumbers.map(String.init)
         secureUITextFieldTitle = intToString.joined(separator: " ")
@@ -312,7 +315,7 @@ extension UIView {
     }
 }
 
-extension MainViewController {
+extension LoginViewController {
     
     func isValid(){
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AuthorizeUIButton: ActionButtonClass{
+final class AuthorizationButton: ActionButton {
     
     override func setup() {
         super.setup()

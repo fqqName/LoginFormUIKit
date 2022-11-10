@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActionButtonClass: UIButton{
+class ActionButton: UIButton {
     
     init(){
         super.init(frame: .zero)

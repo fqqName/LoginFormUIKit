@@ -10,11 +10,12 @@
 		50CC499B2910418B00B9919A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC499A2910418B00B9919A /* AppDelegate.swift */; };
 		50CC49A42910418D00B9919A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CC49A32910418D00B9919A /* Assets.xcassets */; };
 		50CC49A72910418D00B9919A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CC49A52910418D00B9919A /* LaunchScreen.storyboard */; };
-		50CC49B52910432F00B9919A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49B42910432F00B9919A /* MainViewController.swift */; };
-		50CC49B729116D1400B9919A /* ActionButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49B629116D1400B9919A /* ActionButtonClass.swift */; };
+		50CC49B52910432F00B9919A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49B42910432F00B9919A /* LoginViewController.swift */; };
+		50CC49B729116D1400B9919A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49B629116D1400B9919A /* ActionButton.swift */; };
 		50CC49B929116DC800B9919A /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49B829116DC800B9919A /* CustomColors.swift */; };
-		50CC49BB2912868A00B9919A /* AuthorizeUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49BA2912868A00B9919A /* AuthorizeUIButton.swift */; };
+		50CC49BB2912868A00B9919A /* AuthorizationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49BA2912868A00B9919A /* AuthorizationButton.swift */; };
 		50CC49C12912912B00B9919A /* RoundButtonsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49C02912912B00B9919A /* RoundButtonsClass.swift */; };
+		50CC49C32917A62700B9919A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC49C22917A62700B9919A /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +24,12 @@
 		50CC49A32910418D00B9919A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50CC49A62910418D00B9919A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50CC49A82910418D00B9919A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50CC49B42910432F00B9919A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		50CC49B629116D1400B9919A /* ActionButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonClass.swift; sourceTree = "<group>"; };
+		50CC49B42910432F00B9919A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		50CC49B629116D1400B9919A /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		50CC49B829116DC800B9919A /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
-		50CC49BA2912868A00B9919A /* AuthorizeUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeUIButton.swift; sourceTree = "<group>"; };
+		50CC49BA2912868A00B9919A /* AuthorizationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationButton.swift; sourceTree = "<group>"; };
 		50CC49C02912912B00B9919A /* RoundButtonsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonsClass.swift; sourceTree = "<group>"; };
+		50CC49C22917A62700B9919A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 		50CC49AE291042AB00B9919A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				50CC49B42910432F00B9919A /* MainViewController.swift */,
+				50CC49B42910432F00B9919A /* LoginViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,6 +89,7 @@
 		50CC49B3291042FF00B9919A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				50CC49C22917A62700B9919A /* LoginPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -106,8 +109,8 @@
 		50CC49BD2912895D00B9919A /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
-				50CC49B629116D1400B9919A /* ActionButtonClass.swift */,
-				50CC49BA2912868A00B9919A /* AuthorizeUIButton.swift */,
+				50CC49B629116D1400B9919A /* ActionButton.swift */,
+				50CC49BA2912868A00B9919A /* AuthorizationButton.swift */,
 				50CC49C02912912B00B9919A /* RoundButtonsClass.swift */,
 			);
 			path = CustomClasses;
@@ -184,10 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50CC499B2910418B00B9919A /* AppDelegate.swift in Sources */,
-				50CC49B729116D1400B9919A /* ActionButtonClass.swift in Sources */,
+				50CC49B729116D1400B9919A /* ActionButton.swift in Sources */,
+				50CC49C32917A62700B9919A /* LoginPresenter.swift in Sources */,
 				50CC49B929116DC800B9919A /* CustomColors.swift in Sources */,
-				50CC49BB2912868A00B9919A /* AuthorizeUIButton.swift in Sources */,
-				50CC49B52910432F00B9919A /* MainViewController.swift in Sources */,
+				50CC49BB2912868A00B9919A /* AuthorizationButton.swift in Sources */,
+				50CC49B52910432F00B9919A /* LoginViewController.swift in Sources */,
 				50CC49C12912912B00B9919A /* RoundButtonsClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

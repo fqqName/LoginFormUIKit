@@ -17,7 +17,7 @@ var window: UIWindow?
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.green
         
-        let screenVC = MainViewController()
+        let screenVC = LoginViewController()
         
         window?.rootViewController = screenVC
         window?.makeKeyAndVisible()
